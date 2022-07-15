@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+ selector:
+   matchLabels:
+     app: api
+ template:
+  metadata:
+   labels:
+     app: api
+  spec:
+    containers:
+      - name: api
+        image: norbertosantos/pedelogo-catalogo:v1.0.0 
+        ports:
+          - containerPort: 80
+            name: http 
+          - containerPort: 443
+            name: https 
+        imagePullPolicy: Always
+        env:
+            - name: Mongo_Host
+              value: "mongo-service"
+            - name: Mongo_User
+              value: "mongouser"
+            - name: Mongo_Password
+              value: "mongopwd"
+            - name: Mongo_Port
+              value: "27017"
+            - name: Mongo_Database
+              value: "admin" 
