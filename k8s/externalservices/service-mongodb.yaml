@@ -4,4 +4,4 @@ metadata:
   name: service-pedelogo-mongodb
 spec:
   type: ExternalName
-  externalName: mongodb-service.mongodb-pedelogo.svc.cluster.local
+  externalName: service-pedelogo-mongodb.mongodb-pedelogo.svc.cluster.local
