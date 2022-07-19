@@ -21,13 +21,13 @@ spec:
             name: https 
         imagePullPolicy: Always
         env:
-            - name: Mongo_Host
-              value: "mongo-service"
-            - name: Mongo_User
+            - name: Mongo__Host
+              value: "service-mongodb"
+            - name: Mongo__User
               value: "mongouser"
-            - name: Mongo_Password
+            - name: Mongo__Password
               value: "mongopwd"
-            - name: Mongo_Port
+            - name: Mongo__Port
               value: "27017"
-            - name: Mongo_Database
+            - name: Mongo__Database
               value: "admin" 
