@@ -23,7 +23,7 @@ spec:
         imagePullPolicy: Always
         env:
             - name: Mongo__Host
-              value: "service-mongodb"
+              value: "service-pedelogo-mongodb"
             - name: Mongo__User
               value: "mongouser"
             - name: Mongo__Password
