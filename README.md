@@ -63,6 +63,7 @@ apiVersion: v1
 kind: Service 
 metadata: 
   name: api-service 
+  namespace: pedelogo-api
 spec:
   selector:
     app: api 
@@ -122,6 +123,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb-service
+  namespace: mongodb
 spec:
   selector:
     app: mongodb
@@ -159,6 +161,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: service-pedelogo-mongodb
+  namespace: pedelogo-api
 spec:
   type: ExternalName
   externalName: mongodb-service.mongodb.svc.cluster.local
